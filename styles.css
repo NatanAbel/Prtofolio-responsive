@@ -1,0 +1,160 @@
+/* Global desktop view */
+
+body{
+    font-family: 'Asap', sans-serif;
+    margin: 0;
+    background-color: #EBEBEB;
+    color: white;
+}
+
+/* position: fixed and width: 100% ;===> makes the nav bar to stay fixed while scrolling the web up*/
+.header-container{
+    background-color: rgb(60, 60, 60);
+    min-height: 100px;
+    position: fixed;
+    width: 100%;
+}
+
+header{
+    max-width: 1024px;
+    min-height: 100px;
+    /* background-color: blueviolet; */
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+a{
+    color: white;
+    text-decoration: none;
+}
+
+/* font-weight: 700; ===> 700 makes bold */
+.span-highlight{
+    font-weight: 700; 
+}
+
+.mob-wrapper{
+    display:none;
+}
+
+.myButton{
+    border: 1px solid white;
+    /* border-radius: 1.6px; */
+    padding: 10px 25px;
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+.myButton:hover{
+    background-color: bisque;
+    transition-duration: 1s;
+}
+
+.container{
+    min-height: 500px;
+    max-width: 1024px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-top: 140px;
+}
+
+.col{
+    width: 30%;
+    margin-bottom: 20px;
+    background-color: rgb(43, 226, 147);
+}
+
+.col p{
+    font-size: 0.875rem;
+    padding: 20px 25px;
+    line-height: 1.25rem;
+}
+
+.hide-disktop-only{
+    display: none;
+}
+
+.col img{
+    width: 100%;
+    height: auto;
+}
+
+/* the :: is used to join the p tag and first-line */
+.col p::first-line{
+    font-weight: 700;
+}
+
+/* Tablet view */
+@media (max-width: 768px) {
+    .col{
+        width: 45%;
+    }
+    .hide-disktop-only{
+        display: block;
+    }
+
+    .header-container{
+        position: relative;
+    }
+
+    nav{
+        display: none;
+    }
+
+    nav a{
+        display: block;
+    }
+
+    .logo{
+        padding:40px 0;
+    }
+
+    .myButton{
+        margin-left: 0;
+    }
+
+    .container{
+        padding-top: 40px;
+    }
+
+    .mob-wrapper{
+        display: block;
+        padding-right: 30px;
+    }
+
+    .burger-menu{
+        width: 40px;
+    }
+
+    .mob-nav{
+        display: none;
+        position: absolute;
+        padding-top: 10px;
+    }
+
+    
+    .nav-button{
+        display: block;
+        background-color: coral;
+        padding: 15px 30px;
+        margin-left: -70px;
+        text-align: center;
+    }
+
+}
+
+/* Mobile view */
+@media (max-width: 400px) {
+    .col{
+        width: 100%;
+    }
+
+    .hide-mobile{
+        display: none;
+    }
+
+}
